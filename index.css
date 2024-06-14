@@ -1,3 +1,117 @@
-#heading{
-    color :blueviolet;
+.header {
+      display: flex;
+      justify-content: space-between;
 }
+
+
+.header {
+
+border: 2px solid black;
+
+
+}
+
+
+
+
+
+ 
+.nav-item > ul {
+
+display:flex;
+list-style-type: none;
+
+}
+
+
+.nav-item > ul > li {
+           margin:  0px 50px;
+           padding: 25px;
+}
+
+
+.logo {
+ 
+width: 100px;
+
+}
+
+.filter-btn{
+     display:flex;
+     flex-wrap: wrap;
+
+    
+}
+               
+              
+
+
+
+.search {
+    padding: 20px;
+    margin: 10px
+}
+
+.rescontainer{
+
+    border:2px solid black;
+     width: 100% ;
+     height: auto;
+     display: inline-flex;
+      flex-wrap: wrap;
+     
+}
+
+.card{
+    margin: 10px;
+    padding: 10px;
+    width: 200 ;
+    height:auto;
+    background-color: lightgrey;
+    display:wrap;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.card:hover{
+    border:2px solid black;
+    
+}
+
+.reslogo{
+    height: 200px;
+    width: 200px;
+}
+
+.shimmer-container{ 
+display: flex;
+}
+
+
+
+.Shimmer-card{
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height:400px;
+    background-color: lightgrey;
+    display:wrap;
+    flex-wrap: wrap;
+}
+
+ .btnName{
+    width: 20px;
+    height: 15px;
+    margin:10px;
+   padding: 20px;
+
+ }
+
+
+
+ .user-card{
+      margin:5px;
+      padding: 5px;
+      border:1 solid black;
+      
+ }
