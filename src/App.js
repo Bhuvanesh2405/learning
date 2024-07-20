@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; 
 import ReactDOM from "react-dom/client";
 import Header from "../components/Header";
 import Body from "../components/Body";
@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 import Error from "../components/Error"
 import RestrauntMenu from "../components/RestrauntMenu";
 import { createBrowserRouter , RouterProvider, Outlet } from "react-router-dom";
-
+import Cart from "../components/Cart";
 
 const AppLayout = () => {
        
@@ -42,6 +42,11 @@ const AppLayout = () => {
  {
   path: "/restraunts/:resId",
   element:<RestrauntMenu/>,
+ },
+
+ {
+  path: "/cart",
+  element: <Cart/>,
  },
 ],
 

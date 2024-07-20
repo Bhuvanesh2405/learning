@@ -5,6 +5,7 @@ import { CDN_URL } from "../utils/constants";
 const RestrauntCard = (props) =>{
    const {resData} = props;
 
+    
 const{  name,
   cuisines,
   cloudinaryImageId,
@@ -16,9 +17,9 @@ const{  name,
 
    
 
-    <div className="card">
+    <div className="p-4 m-4 w-[250px]  bg-gray-300  rounded-md  hover:bg-slate-400 ">
       
-      <img className="reslogo"
+      <img className="rounded-md "
         src={
          CDN_URL +
           cloudinaryImageId
@@ -33,6 +34,28 @@ const{  name,
   );
 };
 
-  
-  
+
+ /*   // higherorderfunction 
+
+
+
+ 
+  export const withPromotedLabel = (RestrauntCard) =>{
+    return(props) =>{
+      return(
+              <div>
+              <label>Promoted</label>
+              <RestrauntCard {...props} />
+
+              </div>
+
+                
+      );
+
+    };               
+
+  };
+ */
+
+
 export default RestrauntCard;

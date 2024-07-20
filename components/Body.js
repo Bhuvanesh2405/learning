@@ -1,13 +1,15 @@
 import Shimmer from "./Shimmer";
 import { useState,useEffect } from "react";
-import RestrauntCard from "./RestrauntCard";
+import RestrauntCard, { withPromotedLabel }from "./RestrauntCard";
 
 const Body = () => {
       
   const [listOfRestraunts, setListOfRestraunt]=useState([]);
   const [filteredRestraunt,setFilteredRestraunt]=useState([]);
+  
   const [searchText, setSearchText] = useState("");
 
+   
 
   useEffect (() => {
     fetchData();
@@ -36,18 +38,18 @@ setFilteredRestraunt(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithSty
 
 
 return   (
-<div className="body">
+<div className="container  mx-auto flex-auto ">
   <div className="filter">
-    <div className="search">
+    <div className=" m-4 p-4  ">
       <input
         type="text"
-        className="search-box"
+        className="border border-solid border-black rounded-lg"
         value={searchText}
         onChange={(e) => { 
           setSearchText(e.target.value);
         }}
       />
-      <button
+      <button  className="m-2 p-2 bg-slate-200 rounded-lg"
         onClick={() => {
        
           console.log(searchText);
@@ -64,10 +66,9 @@ setFilteredRestraunt(filteredRestraunt);
           Search
         </button>
 </div>
-        
-
+    
 <button
-  className="filter-btn"
+  className="px-2 py-3 bg-slate-200 rounded-lg "
   onClick={() =>
     {
   const filteredList= listOfRestraunts.filter(
@@ -82,11 +83,31 @@ setFilteredRestraunt(filteredRestraunt);
   </button>
    </div>
 
-<div className="rescontainer">
+<div className="flex">
 
   {filteredRestraunt.map((restaurant) => (
-     <RestrauntCard key={restaurant.info.id} resData={restaurant} />
-  ))}
+
+
+
+   /*    higher order function
+
+
+   {restaurant.data.promoted ? (
+   <RestrauntCardProomoted resData={restaurant} />
+   ) : (
+    <RestrauntCard resData={restaurant} />
+   )}
+   */
+
+        <RestrauntCard key={restaurant.info.id} resData={restaurant} />
+      
+     
+   ))}
+
+
+
+
+
    </div>
 </div>
 );

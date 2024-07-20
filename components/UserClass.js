@@ -5,11 +5,15 @@
             super(props);
         
             this.state = {
+          
               userInfo: {
                 name : "dummy",
                 location : "default",
               
-              avatar_url: "https://dummy"},
+          
+            avatar_url   :  "https://dummy"
+          
+        },
             };
 
 
